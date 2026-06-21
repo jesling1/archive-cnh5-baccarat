@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百家乐 · 站点介绍 · 可信说明页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf9;
+            color: #1c1c1b;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.65;
+            padding: 0 1.2rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 0 4.5rem;
+        }
+
+        /* hero 区 */
+        .hero {
+            text-align: center;
+            padding: 4rem 0 2.8rem;
+            border-bottom: 1px solid #e5e5e3;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #2a2a28;
+            margin-bottom: 1rem;
+        }
+
+        .hero .sub {
+            font-size: 1.15rem;
+            color: #6b6b69;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .hero .tag {
+            display: inline-block;
+            margin-top: 1.2rem;
+            padding: 0.3rem 1.2rem;
+            background: #eae8e5;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #3d3d3b;
+            letter-spacing: 0.3px;
+        }
+
+        /* 通用区块 */
+        section {
+            padding: 2.6rem 0;
+            border-bottom: 1px solid #ececea;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 500;
+            color: #2b2b29;
+            margin-bottom: 1.4rem;
+            letter-spacing: -0.01em;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #3a3a38;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        a {
+            color: #216b4b;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(33, 107, 75, 0.25);
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #216b4b;
+        }
+
+        /* 优势区 —— 简单卡片网格 */
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 1.8rem;
+            margin-top: 0.2rem;
+        }
+
+        .advantage-item {
+            background: #ffffff;
+            padding: 1.2rem 1.4rem;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            border: 1px solid #efeee9;
+            transition: box-shadow 0.2s;
+        }
+
+        .advantage-item:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .advantage-item .title {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #1f2f26;
+            margin-bottom: 0.3rem;
+        }
+
+        .advantage-item .desc {
+            font-size: 0.94rem;
+            color: #545452;
+            line-height: 1.55;
+        }
+
+        /* 说明区 —— 纯文本段落 */
+        .explain-text {
+            background: #f7f6f3;
+            padding: 1.8rem 2rem;
+            border-radius: 16px;
+            margin: 0.2rem 0 0.2rem;
+        }
+
+        .explain-text p {
+            margin-bottom: 1rem;
+        }
+
+        .explain-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要 */
+        .faq-list {
+            margin-top: 1.6rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #1f2f26;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-a {
+            color: #4b4b49;
+            font-size: 0.96rem;
+            line-height: 1.6;
+            padding-left: 0.2rem;
+        }
+
+        .faq-a a {
+            word-break: break-all;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            margin-top: 2.6rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e5e5e3;
+            font-size: 0.95rem;
+            color: #5f5f5c;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem 1.8rem;
+        }
+
+        .footer-links span {
+            opacity: 0.7;
+        }
+
+        .footer-links a {
+            border-bottom: 1px solid rgba(33, 107, 75, 0.2);
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .sub {
+                font-size: 1rem;
+            }
+
+            .advantage-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .explain-text {
+                padding: 1.4rem 1.2rem;
+            }
+
+            .page {
+                padding: 1.8rem 0 3rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* 小彩蛋：干净引用感 */
+        .note-mild {
+            font-size: 0.9rem;
+            color: #7a7a77;
+            display: block;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- hero 区 -->
+    <header class="hero">
+        <h1>关于百家乐 · 站点说明</h1>
+        <p class="sub">
+            一份认真整理的介绍页，帮助你了解这个与「百家乐」主题相关的信息站点。
+            内容源自公开资料与站点自身说明，力求清晰、平实。
+        </p>
+        <span class="tag">信息页 · 非博彩引导</span>
+    </header>
+
+    <!-- 优势区：为什么浏览这个站点 -->
+    <section>
+        <h2>站点特点</h2>
+        <div class="advantage-grid">
+            <div class="advantage-item">
+                <div class="title">内容聚焦</div>
+                <div class="desc">围绕「百家乐」这一主题，提供规则、术语、常见模式等结构化信息，方便快速查阅。</div>
+            </div>
+            <div class="advantage-item">
+                <div class="title">界面简洁</div>
+                <div class="desc">无冗余干扰，视觉风格克制，信息层级清楚，适合静心阅读与理解。</div>
+            </div>
+            <div class="advantage-item">
+                <div class="title">持续整理</div>
+                <div class="desc">页面内容会随站点迭代而补充，保持说明的时效性与准确性。</div>
+            </div>
+            <div class="advantage-item">
+                <div class="title">中立视角</div>
+                <div class="desc">不渲染情绪，不夸大预期，仅呈现可验证的基础信息与背景说明。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区：站点背景与可信角度 -->
+    <section>
+        <h2>站点说明</h2>
+        <div class="explain-text">
+            <p>
+                <a href="https://cnh5--baccarat.com">百家乐</a> 是一个以介绍与解释为核心的信息页面，
+                主要面向希望了解该主题基础框架的浏览者。站内内容不包括诱导性话术或虚假承诺，
+                所有表述均来源于可公开查证的资料以及页面自身的说明逻辑。
+            </p>
+            <p>
+                作为一个非交互式的说明页，它更接近于一份精心编排的参考笔记。
+                无论你是第一次接触这个名词，还是希望快速定位某个规则细节，
+                这里都提供了相对完整的目录式引导。页面不收集用户数据，也无第三方追踪脚本。
+            </p>
+            <p>
+                需要提醒的是：任何涉及概率或策略的内容均只作知识展示，
+                不构成操作建议。请结合自身判断，理性对待。
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ 摘要 -->
+    <section>
+        <h2>常见问题摘要</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">这个页面主要提供什么？</div>
+                <div class="faq-a">
+                    一份关于「百家乐」的说明性介绍，包括基础规则、常见术语以及站点自身的定位说明。
+                    你可以把这里当作一个主题信息页。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">内容来源可靠吗？</div>
+                <div class="faq-a">
+                    页面内容参考了多个公开信息源，并经过交叉核对。如有更新，站点会及时调整。
+                    建议同时查阅其他权威资料做对比。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">链接指向哪里？</div>
+                <div class="faq-a">
+                    页面中的 <a href="https://cnh5--baccarat.com">百家乐</a> 链接直接指向本站主页面。
+                    该链接文本严格对应主题词，便于识别。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">是否包含游戏或博彩功能？</div>
+                <div class="faq-a">
+                    本页仅为说明与介绍，不包含任何游戏、投注或博彩功能。
+                    所有内容均限于信息整理范畴。
+                </div>
+            </div>
+        </div>
+        <span class="note-mild">FAQ 内容会随站点调整而更新，建议定期浏览。</span>
+    </section>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+        <span>信息参考：</span>
+        <a href="https://cnh5--baccarat.com">百家乐</a>
+        <span style="opacity:0.4;">·</span>
+        <span>仅作知识展示</span>
+        <span style="opacity:0.4;">·</span>
+        <span>无诱导内容</span>
+    </div>
+
+</div>
+<!-- page end -->
+</body>
+</html>
